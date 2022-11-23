@@ -42,3 +42,13 @@ darkmode.addEventListener("click", () => {
     mode = false;
   }
 })
+
+
+let scrolling = document.getElementById("typingText");
+let href = document.getElementById("hrefscroll");
+
+href.addEventListener("click", () => {
+  scrolling.scrollIntoView({behavior: 'smooth'});
+}
+)
+
