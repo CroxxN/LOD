@@ -12,8 +12,7 @@ let options = {
 let observer = new IntersectionObserver(callback, options)
 function callback  (entries, _observe) {
   entries.forEach((entry) => {
-    if (entry.isIntersecting) {
-
+    if (entry.isIntersecting && navtext.innerText != "Macbook") {
   navtext.innerText = "Macbook";
     thing = "red"
     console.log("Intersecting");

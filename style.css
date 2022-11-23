@@ -58,6 +58,8 @@
   }
   .nav{
     height: auto;
+    position: sticky;
+    top: 0;
     position: relative;
   }
   .nav ul{
@@ -95,18 +97,33 @@
   background-position: center;
   background-repeat: no-repeat;
   height: 100vh;
-  position: absolute;
+  position: relative;
   width: 100%;
 }
 
 #colors{
   background-color: violet;
+  position: relative;
   height: 200vh;
   width: 100%;
 }
+.fixedContainer{
+  position: sticky;
+  margin-top: 10px;
+  padding: 30px;
+  top: 0;
+  left: 0;
+  width: 200px;
+  height: 200px;
+  overflow: auto;
+  background-color: rgba(0,0,0,0.5);
+  z-index: 2;
+}
+.absContainer{
+  position: absolute;
+}
 .bgTest{
   background-color: black;
-  height: 100vh;
   width: 100%;
 }
 .bgTest > h1{
@@ -124,6 +141,26 @@
   color: white;
 }
 
+.right{
+  float: right;
+  background-color: blue;
+  height: 100px;
+  width: 100px;
+  margin-right: 20px;
+}
+
+.left{
+  background-color: blue;
+  height: 100px;
+  width: 100px;
+  float: left;
+  margin-left: 20px;
+}
+.portContainer{
+  display: grid;
+  height: 100vh;
+  width: 100%;
+}
 /* #blackBody{
   height: 100px;
   width: 100vw;
@@ -136,3 +173,29 @@
   width: 100vw;
   background-color: red;
 } */
+
+
+.typingText p{
+  width: 150px;
+  overflow: hidden;
+  color: white;
+  border-right: .15em solid orangered;
+  white-space: nowrap;
+  margin: 0 auto;
+  letter-spacing: 2px;
+  animation: 
+    typing 3.5s steps(15, end),
+    blink-caret .75s step-end infinite;
+
+
+}
+
+@keyframes typing {
+  from { width: 0 }
+  to { width: 150px}
+}
+
+@keyframes blink-caret {
+  from, to { border-color: transparent }
+  50% { border-color: orangered; }
+}
