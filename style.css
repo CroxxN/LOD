@@ -1,8 +1,35 @@
+:root {
+    --bg-name: black;
+}
+
+
+body{
+    background-color: var(--bg-name);
+}
+
+
 *{
   margin: 0;
   padding: 0;
   box-sizing: border-box;
 }
+
+.navcontainer{
+  background-color: #000;
+  height: 80px;
+  width: clamp(300px, 100%, 1000px);
+  display: block;
+  top: 0;
+  left: 0;
+  z-index: 1;
+}
+
+
+
+
+
+
+
 .nav{
   background-color: #000;
   height: 80px;
@@ -186,9 +213,13 @@
   animation: 
     typing 3.5s steps(15, end),
     blink-caret .75s step-end infinite;
-
-
 }
+
+
+.typingText :active {
+  background-color: #000;
+}
+
 
 @keyframes typing {
   from { width: 0 }
@@ -199,3 +230,12 @@
   from, to { border-color: transparent }
   50% { border-color: orangered; }
 }
+
+
+.idkshit{
+  height: 200px;
+}
+
+
+/* dark mode media query   */
+

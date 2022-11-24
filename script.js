@@ -21,27 +21,27 @@ function callback  (entries, _observe) {
 }
 observer.observe(el);
 
-let mode = window.matchMedia("(prefers-color-scheme: dark)").matches;
-console.log(mode);
-if (!mode) {
-  document.body.style.backgroundColor = "white";
-  document.body.style.color = "black";
-} else {
-  document.body.style.backgroundColor = "black";
-  document.body.style.color = "white";
-}
-let darkmode = document.querySelector(".button");
-darkmode.addEventListener("click", () => {
-  if (!mode) {
-    document.body.style.backgroundColor = "black";
-    document.body.style.color = "white";
-    mode = true;
-  } else {
-    document.body.style.backgroundColor = "white";
-    document.body.style.color = "black";
-    mode = false;
-  }
-})
+// let mode = window.matchMedia("(prefers-color-scheme: dark)").matches;
+// console.log(mode);
+// if (!mode) {
+//   document.body.style.backgroundColor = "white";
+//   document.body.style.color = "black";
+// } else {
+//   document.body.style.backgroundColor = "black";
+//   document.body.style.color = "white";
+// }
+// let darkmode = document.querySelector(".button");
+// darkmode.addEventListener("click", () => {
+//   if (!mode) {
+//     document.body.style.backgroundColor = "black";
+//     document.body.style.color = "white";
+//     mode = true;
+//   } else {
+//     document.body.style.backgroundColor = "white";
+//     document.body.style.color = "black";
+//     mode = false;
+//   }
+// })
 
 
 let scrolling = document.getElementById("typingText");
@@ -52,3 +52,18 @@ href.addEventListener("click", () => {
 }
 )
 
+
+let mode = false; 
+
+document.getElementById("butt").addEventListener("click", () => {
+  if (!mode) {
+  document.documentElement.style
+    .setProperty('--bg-name', 'white');
+  mode = true;
+  }
+  else {
+  document.documentElement.style
+    .setProperty('--bg-name', 'black');
+    mode = false;
+  }
+});
